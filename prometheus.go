@@ -20,46 +20,49 @@ func (mn MetricName) String() string {
 }
 
 const (
-	zoneRequestTotalMetricName                   MetricName = "cloudflare_zone_requests_total"
-	zoneRequestCachedMetricName                  MetricName = "cloudflare_zone_requests_cached"
-	zoneRequestSSLEncryptedMetricName            MetricName = "cloudflare_zone_requests_ssl_encrypted"
-	zoneRequestContentTypeMetricName             MetricName = "cloudflare_zone_requests_content_type"
-	zoneRequestCountryMetricName                 MetricName = "cloudflare_zone_requests_country"
-	zoneRequestHTTPStatusMetricName              MetricName = "cloudflare_zone_requests_status"
-	zoneRequestBrowserMapMetricName              MetricName = "cloudflare_zone_requests_browser_map_page_views_count"
-	zoneRequestOriginStatusCountryHostMetricName MetricName = "cloudflare_zone_requests_origin_status_country_host"
-	zoneRequestStatusCountryHostMetricName       MetricName = "cloudflare_zone_requests_status_country_host"
-	zoneBandwidthTotalMetricName                 MetricName = "cloudflare_zone_bandwidth_total"
-	zoneBandwidthCachedMetricName                MetricName = "cloudflare_zone_bandwidth_cached"
-	zoneBandwidthSSLEncryptedMetricName          MetricName = "cloudflare_zone_bandwidth_ssl_encrypted"
-	zoneBandwidthContentTypeMetricName           MetricName = "cloudflare_zone_bandwidth_content_type"
-	zoneBandwidthCountryMetricName               MetricName = "cloudflare_zone_bandwidth_country"
-	zoneThreatsTotalMetricName                   MetricName = "cloudflare_zone_threats_total"
-	zoneThreatsCountryMetricName                 MetricName = "cloudflare_zone_threats_country"
-	zoneThreatsTypeMetricName                    MetricName = "cloudflare_zone_threats_type"
-	zonePageviewsTotalMetricName                 MetricName = "cloudflare_zone_pageviews_total"
-	zoneUniquesTotalMetricName                   MetricName = "cloudflare_zone_uniques_total"
-	zoneColocationVisitsMetricName               MetricName = "cloudflare_zone_colocation_visits"
-	zoneColocationEdgeResponseBytesMetricName    MetricName = "cloudflare_zone_colocation_edge_response_bytes"
-	zoneColocationRequestsTotalMetricName        MetricName = "cloudflare_zone_colocation_requests_total"
-	zoneFirewallEventsCountMetricName            MetricName = "cloudflare_zone_firewall_events_count"
-	zoneHealthCheckEventsOriginCountMetricName   MetricName = "cloudflare_zone_health_check_events_origin_count"
-	workerRequestsMetricName                     MetricName = "cloudflare_worker_requests_count"
-	workerErrorsMetricName                       MetricName = "cloudflare_worker_errors_count"
-	workerCPUTimeMetricName                      MetricName = "cloudflare_worker_cpu_time"
-	workerDurationMetricName                     MetricName = "cloudflare_worker_duration"
-	poolHealthStatusMetricName                   MetricName = "cloudflare_zone_pool_health_status"
-	poolRequestsTotalMetricName                  MetricName = "cloudflare_zone_pool_requests_total"
-	poolOriginHealthStatusMetricName             MetricName = "cloudflare_pool_origin_health_status"
-	logpushFailedJobsAccountMetricName           MetricName = "cloudflare_logpush_failed_jobs_account_count"
-	logpushFailedJobsZoneMetricName              MetricName = "cloudflare_logpush_failed_jobs_zone_count"
-	r2StorageTotalMetricName                     MetricName = "cloudflare_r2_storage_total_bytes"
-	r2StorageMetricName                          MetricName = "cloudflare_r2_storage_bytes"
-	r2OperationMetricName                        MetricName = "cloudflare_r2_operation_count"
-	tunnelInfoMetricName                         MetricName = "cloudflare_tunnel_info"
-	tunnelHealthStatusMetricName                 MetricName = "cloudflare_tunnel_health_status"
-	tunnelConnectorInfoMetricName                MetricName = "cloudflare_tunnel_connector_info"
-	tunnelConnectorActiveConnectionsMetricName   MetricName = "cloudflare_tunnel_connector_active_connections"
+	zoneRequestTotalMetricName                      MetricName = "cloudflare_zone_requests_total"
+	zoneRequestCachedMetricName                     MetricName = "cloudflare_zone_requests_cached"
+	zoneRequestSSLEncryptedMetricName               MetricName = "cloudflare_zone_requests_ssl_encrypted"
+	zoneRequestContentTypeMetricName                MetricName = "cloudflare_zone_requests_content_type"
+	zoneRequestCountryMetricName                    MetricName = "cloudflare_zone_requests_country"
+	zoneRequestHTTPStatusMetricName                 MetricName = "cloudflare_zone_requests_status"
+	zoneRequestBrowserMapMetricName                 MetricName = "cloudflare_zone_requests_browser_map_page_views_count"
+	zoneRequestOriginStatusCountryHostMetricName    MetricName = "cloudflare_zone_requests_origin_status_country_host"
+	zoneRequestOriginStatusCountryHostP50MetricName MetricName = "cloudflare_zone_requests_origin_status_country_host_p50_ms"
+	zoneRequestOriginStatusCountryHostP95MetricName MetricName = "cloudflare_zone_requests_origin_status_country_host_p95_ms"
+	zoneRequestOriginStatusCountryHostP99MetricName MetricName = "cloudflare_zone_requests_origin_status_country_host_p99_ms"
+	zoneRequestStatusCountryHostMetricName          MetricName = "cloudflare_zone_requests_status_country_host"
+	zoneBandwidthTotalMetricName                    MetricName = "cloudflare_zone_bandwidth_total"
+	zoneBandwidthCachedMetricName                   MetricName = "cloudflare_zone_bandwidth_cached"
+	zoneBandwidthSSLEncryptedMetricName             MetricName = "cloudflare_zone_bandwidth_ssl_encrypted"
+	zoneBandwidthContentTypeMetricName              MetricName = "cloudflare_zone_bandwidth_content_type"
+	zoneBandwidthCountryMetricName                  MetricName = "cloudflare_zone_bandwidth_country"
+	zoneThreatsTotalMetricName                      MetricName = "cloudflare_zone_threats_total"
+	zoneThreatsCountryMetricName                    MetricName = "cloudflare_zone_threats_country"
+	zoneThreatsTypeMetricName                       MetricName = "cloudflare_zone_threats_type"
+	zonePageviewsTotalMetricName                    MetricName = "cloudflare_zone_pageviews_total"
+	zoneUniquesTotalMetricName                      MetricName = "cloudflare_zone_uniques_total"
+	zoneColocationVisitsMetricName                  MetricName = "cloudflare_zone_colocation_visits"
+	zoneColocationEdgeResponseBytesMetricName       MetricName = "cloudflare_zone_colocation_edge_response_bytes"
+	zoneColocationRequestsTotalMetricName           MetricName = "cloudflare_zone_colocation_requests_total"
+	zoneFirewallEventsCountMetricName               MetricName = "cloudflare_zone_firewall_events_count"
+	zoneHealthCheckEventsOriginCountMetricName      MetricName = "cloudflare_zone_health_check_events_origin_count"
+	workerRequestsMetricName                        MetricName = "cloudflare_worker_requests_count"
+	workerErrorsMetricName                          MetricName = "cloudflare_worker_errors_count"
+	workerCPUTimeMetricName                         MetricName = "cloudflare_worker_cpu_time"
+	workerDurationMetricName                        MetricName = "cloudflare_worker_duration"
+	poolHealthStatusMetricName                      MetricName = "cloudflare_zone_pool_health_status"
+	poolRequestsTotalMetricName                     MetricName = "cloudflare_zone_pool_requests_total"
+	poolOriginHealthStatusMetricName                MetricName = "cloudflare_pool_origin_health_status"
+	logpushFailedJobsAccountMetricName              MetricName = "cloudflare_logpush_failed_jobs_account_count"
+	logpushFailedJobsZoneMetricName                 MetricName = "cloudflare_logpush_failed_jobs_zone_count"
+	r2StorageTotalMetricName                        MetricName = "cloudflare_r2_storage_total_bytes"
+	r2StorageMetricName                             MetricName = "cloudflare_r2_storage_bytes"
+	r2OperationMetricName                           MetricName = "cloudflare_r2_operation_count"
+	tunnelInfoMetricName                            MetricName = "cloudflare_tunnel_info"
+	tunnelHealthStatusMetricName                    MetricName = "cloudflare_tunnel_health_status"
+	tunnelConnectorInfoMetricName                   MetricName = "cloudflare_tunnel_connector_info"
+	tunnelConnectorActiveConnectionsMetricName      MetricName = "cloudflare_tunnel_connector_active_connections"
 )
 
 type MetricsSet map[MetricName]struct{}
@@ -120,6 +123,24 @@ var (
 	zoneRequestOriginStatusCountryHost = prometheus.NewCounterVec(prometheus.CounterOpts{
 		Name: zoneRequestOriginStatusCountryHostMetricName.String(),
 		Help: "Count of not cached requests for zone per origin HTTP status per country per host",
+	}, []string{"zone", "account", "status", "country", "host"},
+	)
+
+	zoneRequestOriginStatusCountryHostP50 = prometheus.NewGaugeVec(prometheus.GaugeOpts{
+		Name: zoneRequestOriginStatusCountryHostP50MetricName.String(),
+		Help: "P50 latency of not cached requests for zone per origin HTTP status per country per host, in ms",
+	}, []string{"zone", "account", "status", "country", "host"},
+	)
+
+	zoneRequestOriginStatusCountryHostP95 = prometheus.NewGaugeVec(prometheus.GaugeOpts{
+		Name: zoneRequestOriginStatusCountryHostP95MetricName.String(),
+		Help: "P95 latency of not cached requests for zone per origin HTTP status per country per host, in ms",
+	}, []string{"zone", "account", "status", "country", "host"},
+	)
+
+	zoneRequestOriginStatusCountryHostP99 = prometheus.NewGaugeVec(prometheus.GaugeOpts{
+		Name: zoneRequestOriginStatusCountryHostP99MetricName.String(),
+		Help: "P99 latency of not cached requests for zone per origin HTTP status per country per host, in ms",
 	}, []string{"zone", "account", "status", "country", "host"},
 	)
 
@@ -396,6 +417,15 @@ func mustRegisterMetrics(deniedMetrics MetricsSet) {
 	}
 	if !deniedMetrics.Has(zoneRequestOriginStatusCountryHostMetricName) {
 		prometheus.MustRegister(zoneRequestOriginStatusCountryHost)
+	}
+	if !deniedMetrics.Has(zoneRequestOriginStatusCountryHostP50MetricName) {
+		prometheus.MustRegister(zoneRequestOriginStatusCountryHostP50)
+	}
+	if !deniedMetrics.Has(zoneRequestOriginStatusCountryHostP95MetricName) {
+		prometheus.MustRegister(zoneRequestOriginStatusCountryHostP95)
+	}
+	if !deniedMetrics.Has(zoneRequestOriginStatusCountryHostP99MetricName) {
+		prometheus.MustRegister(zoneRequestOriginStatusCountryHostP99)
 	}
 	if !deniedMetrics.Has(zoneRequestStatusCountryHostMetricName) {
 		prometheus.MustRegister(zoneRequestStatusCountryHost)
@@ -818,6 +848,9 @@ func addHTTPAdaptiveGroups(z *zoneResp, name string, account string) {
 	// Clear stale series for this zone/account
 	label := prometheus.Labels{"zone": name, "account": account}
 	zoneRequestOriginStatusCountryHost.DeletePartialMatch(label)
+	zoneRequestOriginStatusCountryHostP50.DeletePartialMatch(label)
+	zoneRequestOriginStatusCountryHostP95.DeletePartialMatch(label)
+	zoneRequestOriginStatusCountryHostP99.DeletePartialMatch(label)
 	zoneRequestStatusCountryHost.DeletePartialMatch(label)
 
 	for _, g := range z.HTTPRequestsAdaptiveGroups {
@@ -829,6 +862,33 @@ func addHTTPAdaptiveGroups(z *zoneResp, name string, account string) {
 				"country": g.Dimensions.ClientCountryName,
 				"host":    g.Dimensions.ClientRequestHTTPHost,
 			}).Add(float64(g.Count))
+
+		zoneRequestOriginStatusCountryHostP50.With(
+			prometheus.Labels{
+				"zone":    name,
+				"account": account,
+				"status":  strconv.Itoa(int(g.Dimensions.OriginResponseStatus)),
+				"country": g.Dimensions.ClientCountryName,
+				"host":    g.Dimensions.ClientRequestHTTPHost,
+			}).Set(float64(g.Quantile.OriginResponseDurationMsP50))
+
+		zoneRequestOriginStatusCountryHostP95.With(
+			prometheus.Labels{
+				"zone":    name,
+				"account": account,
+				"status":  strconv.Itoa(int(g.Dimensions.OriginResponseStatus)),
+				"country": g.Dimensions.ClientCountryName,
+				"host":    g.Dimensions.ClientRequestHTTPHost,
+			}).Set(float64(g.Quantile.OriginResponseDurationMsP95))
+
+		zoneRequestOriginStatusCountryHostP99.With(
+			prometheus.Labels{
+				"zone":    name,
+				"account": account,
+				"status":  strconv.Itoa(int(g.Dimensions.OriginResponseStatus)),
+				"country": g.Dimensions.ClientCountryName,
+				"host":    g.Dimensions.ClientRequestHTTPHost,
+			}).Set(float64(g.Quantile.OriginResponseDurationMsP99))
 	}
 
 	for _, g := range z.HTTPRequestsEdgeCountryHost {
