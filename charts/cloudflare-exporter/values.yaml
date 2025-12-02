@@ -65,6 +65,7 @@ serviceMonitor:
   targetLabels: []
   metricRelabelings: []
 
+# Set priority class name https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/#priorityclass
 priorityClassName: ""
 
 resources: {}
