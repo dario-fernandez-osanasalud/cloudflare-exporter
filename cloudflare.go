@@ -217,6 +217,11 @@ type zoneResp struct {
 			ClientCountryName     string `json:"clientCountryName"`
 			ClientRequestHTTPHost string `json:"clientRequestHTTPHost"`
 		} `json:"dimensions"`
+		Quantile struct {
+			OriginResponseDurationMsP50 uint `json:"originResponseDurationMsP50"`
+			OriginResponseDurationMsP95 uint `json:"originResponseDurationMsP95"`
+			OriginResponseDurationMsP99 uint `json:"originResponseDurationMsP99"`
+		} `json:"quantiles"`
 	} `json:"httpRequestsAdaptiveGroups"`
 
 	HTTPRequestsEdgeCountryHost []struct {
@@ -540,6 +545,11 @@ query ($zoneIDs: [String!], $mintime: Time!, $maxtime: Time!, $limit: Int!) {
 					originResponseStatus
 					clientCountryName
 					clientRequestHTTPHost
+				}
+				quantiles {
+					originResponseDurationMsP50
+					originResponseDurationMsP95
+					originResponseDurationMsP99
 				}
 			}
 			httpRequestsEdgeCountryHost: httpRequestsAdaptiveGroups(limit: $limit, filter: { datetime_geq: $mintime, datetime_lt: $maxtime, requestSource_in: ["eyeball"] }) {

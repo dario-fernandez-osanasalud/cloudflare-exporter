@@ -111,6 +111,9 @@ Note: `ZONE_<name>` configuration is not supported as flag.
 # HELP cloudflare_zone_requests_content_type Number of request for zone per content type
 # HELP cloudflare_zone_requests_country Number of request for zone per country
 # HELP cloudflare_zone_requests_origin_status_country_host Count of not cached requests for zone per origin HTTP status per country per host
+# HELP cloudflare_zone_requests_origin_status_country_host_p50_ms P50 latency of not cached requests for zone per origin HTTP status per country per host, in ms
+# HELP cloudflare_zone_requests_origin_status_country_host_p95_ms P95 latency of not cached requests for zone per origin HTTP status per country per host, in ms
+# HELP cloudflare_zone_requests_origin_status_country_host_p99_ms P99 latency of not cached requests for zone per origin HTTP status per country per host, in ms
 # HELP cloudflare_zone_requests_ssl_encrypted Number of encrypted requests for zone
 # HELP cloudflare_zone_requests_status Number of request for zone per HTTP status
 # HELP cloudflare_zone_requests_status_country_host Count of requests for zone per edge HTTP status per country per host
