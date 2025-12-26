@@ -43,9 +43,6 @@ HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
 # Set entrypoint
 ENTRYPOINT ["/usr/local/bin/cloudflare_exporter"]
 
-# Default command (can be overridden)
-CMD ["--help"]
-
 # Labels
 LABEL org.opencontainers.image.title="Cloudflare Prometheus Exporter" \
       org.opencontainers.image.description="Prometheus exporter for Cloudflare analytics and metrics" \
