@@ -196,6 +196,9 @@ func runExporter() {
 	log.Info("Scrape interval set to ", scrapeInterval)
 
 	go func() {
+		// Run initial scrape immediately
+		go fetchMetrics()
+
 		ticker := time.NewTicker(scrapeInterval)
 		defer ticker.Stop()
 
