@@ -196,7 +196,10 @@ func runExporter() {
 	log.Info("Scrape interval set to ", scrapeInterval)
 
 	go func() {
-		for ; true; <-time.NewTicker(scrapeInterval).C {
+		ticker := time.NewTicker(scrapeInterval)
+		defer ticker.Stop()
+
+		for range ticker.C {
 			go fetchMetrics()
 		}
 	}()
