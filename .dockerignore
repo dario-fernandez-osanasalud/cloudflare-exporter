@@ -1,0 +1,38 @@
+# Git files
+.git
+.gitignore
+.github
+
+# Build artifacts
+cloudflare_exporter
+dist/
+*.log
+*.test
+venom*.log
+basic_tests.*
+pprof_cpu*
+
+# Documentation
+README.md
+LICENSE
+*.md
+
+# CI/CD
+.golangci.yaml
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# Tests
+tests/
+run_e2e.sh
+
+# Helm charts
+charts/
+
+# Dependencies (will be downloaded in container)
+vendor/
